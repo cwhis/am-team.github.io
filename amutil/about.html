@@ -6,7 +6,7 @@
     <meta name="generator" content="nico 0.5.1">
     <meta name="theme" content="autumn 0.1">
     <meta name="keywords" content="支付宝,无线前端,web解决方案,前端,mobile">
-    <title>关于无线Web解决方案 - AM | AM - 移动Web开放解决方案</title>
+    <title>关于AMUtil | AM - 移动Web开放解决方案</title>
     <link rel="stylesheet" href="../static/1140.css"/>
     <link rel="stylesheet" href="../static/wiki.css"/>
     <link rel="stylesheet" href="../static/syntax.css"/>
@@ -34,8 +34,8 @@
                     
 <ul class="nav">
     <li>
-        <a  class="active"  archiveId = "about"
-        href="about.html">
+        <a  archiveId = "about"
+        href="../about/about.html">
         关于AM </a>
         
     </li>
@@ -93,17 +93,17 @@
     </li>
     
     <li>
-        <a  archiveId = "amutil"
-        href="../amutil/about.html">
+        <a  class="active"  archiveId = "amutil"
+        href="about.html">
         AMUtil </a>
         
         <ul class="nav-sub">
             <li>
-                <a href="../amutil/about.html">关于AMUtil</a>
+                <a href="about.html">关于AMUtil</a>
             </li>
             
             <li>
-                <a href="../amutil/au-doc.html">接口文档</a>
+                <a href="au-doc.html">接口文档</a>
             </li>
             
             <li>
@@ -200,32 +200,23 @@
     <div class="ninecol content">
         <div class="document">
             <div class="post-header">
-                <h2 class="document-title">关于无线Web解决方案 - AM</h2>
+                <h2 class="document-title">关于AMUtil</h2>
 
                 <div class="post-meta">
                     <!--<span></span> /-->
-                    <time datetime="2014-06-25">2014-06-25</time>
+                    <time datetime="2014-11-25">2014-11-25</time>
                 </div>
             </div>
             <div class="entry-content">
-                <h2 id="什么是am">什么是AM</h2><p>AM是支付宝无线Web开放解决方案的简称 ，全称AlipayMobileWebOpenSolution。</p>
-<p>AM不是一个具体的框架和类库，它是支付宝无线Web开发经验的总结和累积，集合了无线Web各要素在一体的一系列解决方案</p>
-<p>它从无线Web的各个方面提供了针对性的方案/工具集，能大幅度提升无线Web网站开发效率</p>
-<p>AM主要提供了移动Web开发的样式，脚本、控件以及WebApp开发等工具之外，还提供了相关的无线建站规范、指南以及文档和调试方案等</p>
-<h2 id="目标">目标</h2><p>快速开发性能高效、跨各设备平台以及用户体验良好的无线Web网站，并且它能和其他任何现存Web框架/类库整合</p>
-<h2 id="特点">特点</h2><ol>
-<li>轻量性</li>
-<li>低侵入性</li>
-<li>成品化</li>
-<li>便于使用</li>
-</ol>
-<h2 id="简介">简介</h2><p>当前AM的解决方案有AMUI、AMJ、AMW、AK47、AMBridge五个主要成员。</p>
-<ul>
-<li><strong>AMUI</strong> 优化页面结构、样式的解决方案，包含并不限于通用样式库、场景解决方案等。</li>
-<li><strong>AMJ</strong> 用于提高和加快日常JS业务逻辑代码的开发进度和代码质量、运行效率，避免某些坑而提供个JS工具集。</li>
-<li><strong>AMW</strong> 无线Web上的控件集，其中包括各类拟态弹窗、日历等类native控件，让用户在使用这些控件上达到一个良好的用户体验。</li>
+                <h2 id="技术目标">技术目标</h2><p>在支付宝钱包的平台化路线上，大量的拥有 <strong>短平快</strong> （流程短、扁平化、快速开发）特征的业务需求不断涌现，对于开发平台更加如此</p>
+<p>现在开放平台上，还没有一个适应于第三方的javascript方面的开放式类库，没有足够的技术沉淀导致重复造轮子的情况屡次发生，因此AMUtil类库应运而生。</p>
+<p>与Arale倡导的 企业级框架的思路不同，AMJ是一个轻量级的解决方案，让开发者能够快速使用。</p>
+<p>UI组件通用视觉设计将交由AMUI解决，AMUtil将关注于解决javasript语言这层。</p>
+<p>因此AMJ的主要技术目标定位为 <strong>高效高质量的开放代码通用解决方案</strong></p>
+<h2 id="主要功能">主要功能:</h2><ul>
+<li><strong>核心类</strong> date、storage、image 等...</li>
+<li><strong>扩展类</strong> history、log 等...</li>
 </ul>
-<h2 id="结构图">结构图</h2><p><img src="https://i.alipayobjects.com/i/localhost/jpg/201407/30qIpXPIaN.jpg" alt="AM结构组织图图"></p>
 
             </div>
         </div>
@@ -321,7 +312,7 @@
     //                trigger: '#search',
     //                filter:"stringMatch",
     //                dataSource: [
-    //"about.html","../amg/dev-exp-doc.html","../amg/mobile-platform-grade.html","../amg/website-guild.html","../amteam/join.html","../amui/about.html","../amui/amui-doc.html","../amutil/about.html","../amutil/au-doc.html","../amw/about.html","../amw/aw-doc.html","../default.html","../h5container/ab-doc.html","../h5container/about.html","../h5container/jsapi-doc.html","../wiki/bookmark.html",
+    //"../about/about.html","../amg/dev-exp-doc.html","../amg/mobile-platform-grade.html","../amg/website-guild.html","../amteam/join.html","../amui/about.html","../amui/amui-doc.html","about.html","au-doc.html","../amw/about.html","../amw/aw-doc.html","../default.html","../h5container/ab-doc.html","../h5container/about.html","../h5container/jsapi-doc.html","../wiki/bookmark.html",
     //                ]
     //            }).render().on('itemSelect',function  (data) {
     //              window.location = data.matchKey;
