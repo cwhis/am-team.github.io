@@ -45,7 +45,7 @@ define(function(require, exports, module) {
         $("body").animate({scrollTop: '0'}, 400);
     });
     $(".threecol.meta").on("click", "a", function (event) {       //动画滚动到指定锚点
-        history.pushState && event.preventDefault();    //不支持historyAPI则退化为默认方法
+        event.preventDefault();    //不支持historyAPI则退化为默认方法
         var t = $(this), url;
         $("html, body").animate({scrollTop: $(t.attr("href")).offset().top - 57}, 800);
         url = window.location.pathname.split("/");
@@ -137,7 +137,7 @@ define(function(require, exports, module) {
         var titleNodes=$('.document .entry-content').find('h2,h3');
         var sidebar=$('.threecol.meta');
         titleNodes.each(function(index){
-            if(this.getBoundingClientRect().bottom > 17 && this.getBoundingClientRect().top < window.innerHeight){
+            if(this.getBoundingClientRect().bottom > 17 && this.getBoundingClientRect().top < document.documentElement.clientHeight){
                 var curNode=sidebar.find('[data-index="'+index+'"]');
                 curNode.closest('dl').siblings('dl').removeClass('active');
                 curNode.closest('dl').addClass('active');
