@@ -8,7 +8,7 @@ define(function(require, exports, module) {
         })
         //加入复制到剪贴版按钮
         $(".highlight").append("<span class='clipbord'>复制到剪贴版</span>");
-        //锚点链接自动定位  
+        //锚点链接自动定位
         if(window.location.hash.length > 0){
             //如果高于1.9则不支持jQuery.browser
             var hash = jQuery.browser.safari ? decodeURI(window.location.hash) : window.location.hash;
@@ -49,7 +49,7 @@ define(function(require, exports, module) {
         var t = $(this), url;
         $("html, body").animate({scrollTop: $(t.attr("href")).offset().top - 57}, 800);
         url = window.location.pathname.split("/");
-        history.pushState({}, "", url[url.length - 1] + t.attr("href"));
+        history.pushState && history.pushState({}, "", url[url.length - 1] + t.attr("href"));
     });
     $(".navbar-toggle").click(function () {             //小屏下切换菜单
         $(".header-nav").slideToggle(800);
@@ -65,7 +65,7 @@ define(function(require, exports, module) {
         $(this).siblings(".clipbord").addClass("hide");
     })
     $(document).mouseup(function () {
-        if ($.trim(document.getSelection().toString()) == "") {
+        if (document.getSelection && $.trim(document.getSelection().toString()) == "") {
             $(".clipbord").removeClass("hide");
         };
     });
@@ -132,7 +132,7 @@ define(function(require, exports, module) {
             $(".goTop").fadeOut(200);
         }
     }
-    
+
     function _titleActive() {       //边栏标题跟随
         var titleNodes=$('.document .entry-content').find('h2,h3');
         var sidebar=$('.threecol.meta');
