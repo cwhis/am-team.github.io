@@ -42,7 +42,7 @@ define(function(require, exports, module) {
     });
 
     $(".goTop").click(function () {                     //滚动到顶
-        $("body").animate({scrollTop: '0'}, 400);
+        $("html, body").animate({scrollTop: '0'}, 400);
     });
     $(".threecol.meta").on("click", "a", function (event) {       //动画滚动到指定锚点
         event.preventDefault();    //不支持historyAPI则退化为默认方法
