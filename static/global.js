@@ -46,8 +46,9 @@ define(function(require, exports, module) {
     });
     $(".threecol.meta").on("click", "a", function (event) {       //动画滚动到指定锚点
         event.preventDefault();    //不支持historyAPI则退化为默认方法
-        var t = $(this), url;
-        $("html, body").animate({scrollTop: $(t.attr("href")).offset().top - 57}, 800);
+        var t = $(this), url, idx;
+        idx = $("[href=" + t.attr('href') + "]").index(t);
+        $("html, body").animate({scrollTop: $(t.attr("href")).eq(idx).offset().top - 57}, 800);
         url = window.location.pathname.split("/");
         history.pushState && history.pushState({}, "", url[url.length - 1] + t.attr("href"));
     });
