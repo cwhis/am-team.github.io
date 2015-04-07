@@ -5,7 +5,7 @@ define(function(require, exports, module) {
             if($(this).attr('href').indexOf("#") !== 0){
                 $(this).attr('target','_blank');
             }
-        })
+        });
         //加入复制到剪贴版按钮
         $(".highlight").append("<span class='clipbord'>复制到剪贴版</span>");
         //锚点链接自动定位
@@ -64,11 +64,11 @@ define(function(require, exports, module) {
     });
     $(".highlight pre").mousedown(function () {             //鼠标选择文本
         $(this).siblings(".clipbord").addClass("hide");
-    })
+    });
     $(document).mouseup(function () {
-        if (document.getSelection && $.trim(document.getSelection().toString()) == "") {
+        if (document.getSelection && $.trim(document.getSelection().toString()) === "") {
             $(".clipbord").removeClass("hide");
-        };
+        }
     });
 
     function _sidebarInit () {          //初始化边栏

@@ -264,11 +264,14 @@ hr{
 }
 
 .nav > li{
-    width: 125px;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
     display: block;
-    float: left;
     text-align: center;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav > li > a{
@@ -304,8 +307,9 @@ hr{
 }
 
 .nav-sub li a{
+    line-height: 45px;
     text-align: center;
-    padding: 1em 0;
+    padding: .2em 1em;
     color: #fff;
     display: block;
 }
@@ -612,8 +616,8 @@ hr{
         width: 94%;
     }
     .navigation{
-        position: relative;
-        top: auto;
+        position: relative;  
+        top: auto;    
     }
     .navigation .nav{
         display: block;
